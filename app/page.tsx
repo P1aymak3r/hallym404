@@ -103,8 +103,9 @@ export default function Home() {
             loop
             muted
             playsInline
+            className="object-cover w-full h-full"
           ></video>
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+          <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto px-4">
               <div className="max-w-lg">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
