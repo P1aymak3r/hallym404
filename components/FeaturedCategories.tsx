@@ -4,8 +4,8 @@ import React from 'react'
 import Image from 'next/image'
 
 const categories = [
-  { name: 'Woman', image: '/images/category-women.jpg' },
-  { name: 'Man', image: '/images/category-men.jpg' },
+  { name: 'Woman', image: '/images/woman.jpg' },
+  { name: 'Man', image: '/images/man.jpg' },
   { name: 'Kid', image: '/images/kid.jpg' },
   { name: 'Accessories', image: '/images/ring.jpg' }
 ]
