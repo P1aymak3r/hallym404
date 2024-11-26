@@ -95,12 +95,15 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative h-screen">
-          <iframe
-            src="https://drive.google.com/file/d/1tWHoiwWoT0zGp7rQ2twPAJ0EyQ1g_R-T/view"
+          <video
+            src="https://www.dropbox.com/scl/fi/gvnkoqieyy6t9nzla8b3m/MainPage.mp4?rlkey=f5dua2ovis58tfgrt678heyyt&st=gcqi0iq9&raw=1"
             width="100%"
             height="100%"
-            allow="autoplay"
-          ></iframe>
+            autoPlay
+            loop
+            muted
+            playsInline
+          ></video>
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center">
             <div className="container mx-auto px-4">
               <div className="max-w-lg">
