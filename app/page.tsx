@@ -11,6 +11,7 @@ import LoginPopup from '../components/login-popup'
 import FeaturedCategories from '../components/FeaturedCategories'
 import { AuthContext } from '../app/context/AuthContext'
 import { useRouter } from 'next/navigation'
+import { ChatButton } from '../components/ChatButton'
 
 export default function Home() {
   const { isLoggedIn, logout } = useContext(AuthContext)
@@ -124,8 +125,8 @@ export default function Home() {
         {/* Featured Categories 섹션 */}
         <FeaturedCategories />
 
- {/* Featured In Section */}
- <section className="py-16 bg-gray-50">
+        {/* Featured In Section */}
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-center text-lg font-medium text-gray-600 mb-12">FEATURED IN</h2>
             <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
@@ -170,55 +171,55 @@ export default function Home() {
 
         {/* New Arrivals */}
         <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">New Arrivals</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { id: 1, name: '저지 맥시 스커트', price: '89,000', image: '/images/n1.jpg' },
-              { id: 2, name: '크롭트 플러피 재킷', price: '129,000', image: '/images/n2.jpg' },
-              { id: 3, name: '턱시도 재킷 드레스', price: '159,000', image: '/images/n3.jpg' },
-              { id: 4, name: '테디베어 코트', price: '69,000', image: '/images/n4.jpg' },
-              { id: 5, name: '페이턴트 펌프스', price: '79,000', image: '/images/n5.jpg' },
-              { id: 6, name: '라인스톤 디테일 셔츠', price: '99,000', image: '/images/n6.jpg' },
-              { id: 7, name: '리브니트 보트넥 탑', price: '85,000', image: '/images/n7.jpg' },
-              { id: 8, name: '오버사이즈 집업 후디', price: '199,000', image: '/images/n8.jpg' }
-            ].map((product, index) => (
-              <div key={product.id} className="group">
-                {index === 0 ? (
-                  <Link href="/product/classic-denim-jacket">
-                    <div className="relative h-[400px] mb-4 rounded-lg overflow-hidden">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        width={300}
-                        height={400}
-                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
-                    <h3 className="font-semibold mb-2">{product.name}</h3>
-                    <p className="text-gray-600">₩{product.price}</p>
-                  </Link>
-                ) : (
-                  <>
-                    <div className="relative h-[400px] mb-4 rounded-lg overflow-hidden">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        width={300}
-                        height={400}
-                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
-                    <h3 className="font-semibold mb-2">{product.name}</h3>
-                    <p className="text-gray-600">₩{product.price}</p>
-                  </>
-                )}
-              </div>
-            ))}
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8">New Arrivals</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { id: 1, name: '헤어리 오버핏 테일러드 자켓', price: '129,000', image: '/images/n1.jpg' },
+                { id: 2, name: '캐시미어 스웨터', price: '69,000', image: '/images/n2.jpg' },
+                { id: 3, name: '가죽 크로스백', price: '159,000', image: '/images/n3.jpg' },
+                { id: 4, name: '린넨 셔츠', price: '69,000', image: '/images/n4.jpg' },
+                { id: 5, name: '슬림핏 진', price: '79,000', image: '/images/n5.jpg' },
+                { id: 6, name: '니트 카디건', price: '99,000', image: '/images/n6.jpg' },
+                { id: 7, name: '플리츠 스커트', price: '85,000', image: '/images/n7.jpg' },
+                { id: 8, name: '오버사이즈 코트', price: '199,000', image: '/images/n8.jpg' }
+              ].map((product, index) => (
+                <div key={product.id} className="group">
+                  {index === 0 ? (
+                    <Link href="/product/classic-denim-jacket">
+                      <div className="relative h-[400px] mb-4 rounded-lg overflow-hidden">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          width={300}
+                          height={400}
+                          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                        />
+                      </div>
+                      <h3 className="font-semibold mb-2">{product.name}</h3>
+                      <p className="text-gray-600">₩{product.price}</p>
+                    </Link>
+                  ) : (
+                    <>
+                      <div className="relative h-[400px] mb-4 rounded-lg overflow-hidden">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          width={300}
+                          height={400}
+                          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                        />
+                      </div>
+                      <h3 className="font-semibold mb-2">{product.name}</h3>
+                      <p className="text-gray-600">₩{product.price}</p>
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -264,6 +265,9 @@ export default function Home() {
 
       {/* Login Popup */}
       {showLoginPopup && <LoginPopup onClose={() => setShowLoginPopup(false)} />}
+
+      {/* Chat Button */}
+      <ChatButton />
     </div>
   )
 }
