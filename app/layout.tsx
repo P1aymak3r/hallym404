@@ -1,7 +1,11 @@
+'use client'
+
 import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Providers from '../components/Providers'
+import { AuthProvider } from './context/AuthContext'
+import { ProfileProvider } from './context/ProfileContext'
+import React from 'react'
+import { UserProvider } from './context/UserContext'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,6 +14,7 @@ export const metadata: Metadata = {
   description: 'Your one-stop shop for trendy clothing',
 }
 
+
 export default function RootLayout({
   children,
 }: {
@@ -17,10 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
-        <Providers>
-          {children}
-        </Providers>
+      <body>
+        <AuthProvider>
+          <ProfileProvider>
+            <UserProvider>
+              {children}
+            </UserProvider>
+          </ProfileProvider>
+        </AuthProvider>
       </body>
     </html>
   )
