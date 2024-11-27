@@ -1,17 +1,10 @@
+'use client'
+
 import './globals.css'
 import { AuthProvider } from './context/AuthContext'
 import { ProfileProvider } from './context/ProfileContext'
 import React from 'react'
 import { UserProvider } from './context/UserContext'
-
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'WearShare',
-  description: 'Your one-stop shop for trendy clothing',
-}
-
 
 export default function RootLayout({
   children,
