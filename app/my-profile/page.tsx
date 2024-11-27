@@ -1,29 +1,24 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useContext } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, User } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select } from "../../components/ui/select"
+import { ProfileContext } from '../context/ProfileContext'
+import { useRouter } from 'next/navigation'
 
 export default function MyProfile() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [profile, setProfile] = useState({
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    height: '',
-    weight: '',
-    bodyType: '',
-  })
+  const { profile, setProfile } = useContext(ProfileContext)!
+  const router = useRouter()
 
   useEffect(() => {
     const loggedIn = localStorage.getItem('isLoggedIn') === 'true'
-    setIsLoggedIn(loggedIn)
     if (!loggedIn) {
-      window.location.href = '/'
+      router.push('/')
     }
-  }, [])
+  }, [router])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -32,13 +27,9 @@ export default function MyProfile() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the data to your backend
-    console.log('Profile updated:', profile)
-    alert('Profile updated successfully!')
-  }
-
-  if (!isLoggedIn) {
-    return null
+    // 여기서 백엔드로 데이터를 전송할 수 있습니다.
+    console.log('프로필 업데이트:', profile)
+    alert('프로필이 성공적으로 업데이트되었습니다!')
   }
 
   return (
@@ -48,7 +39,7 @@ export default function MyProfile() {
           <Link href="/my-page" className="text-gray-600 hover:text-gray-900 mr-4">
             <ArrowLeft className="h-6 w-6" />
           </Link>
-          <h1 className="text-2xl font-bold">My Profile</h1>
+          <h1 className="text-2xl font-bold">내 프로필</h1>
         </div>
       </header>
 
@@ -66,7 +57,7 @@ export default function MyProfile() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">이름</label>
               <Input
                 type="text"
                 id="name"
@@ -78,7 +69,7 @@ export default function MyProfile() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">이메일</label>
               <Input
                 type="email"
                 id="email"
@@ -90,39 +81,38 @@ export default function MyProfile() {
             </div>
 
             <div>
-              <label htmlFor="height" className="block text-sm font-medium text-gray-700">Height (cm)</label>
+              <label htmlFor="height" className="block text-sm font-medium text-gray-700">키 (cm)</label>
               <Input
                 type="number"
                 id="height"
                 name="height"
                 value={profile.height}
                 onChange={handleChange}
-                placeholder="Enter your height in cm"
+                placeholder="키를 cm 단위로 입력하세요"
               />
             </div>
 
             <div>
-              <label htmlFor="weight" className="block text-sm font-medium text-gray-700">Weight (kg)</label>
+              <label htmlFor="weight" className="block text-sm font-medium text-gray-700">몸무게 (kg)</label>
               <Input
                 type="number"
                 id="weight"
                 name="weight"
                 value={profile.weight}
                 onChange={handleChange}
-                placeholder="Enter your weight in kg"
+                placeholder="몸무게를 kg 단위로 입력하세요"
               />
             </div>
 
             <div>
-              <label htmlFor="bodyType" className="block text-sm font-medium text-gray-700">Body Type</label>
+              <label htmlFor="bodyType" className="block text-sm font-medium text-gray-700">체형</label>
               <Select
                 id="bodyType"
                 name="bodyType"
                 value={profile.bodyType}
                 onChange={handleChange}
               >
-                <option value="">체형 선택
-                </option>
+                <option value="">체형 선택</option>
                 <option value="ectomorph">슬림</option>
                 <option value="mesomorph">표준</option>
                 <option value="endomorph">오버핏</option>
@@ -130,7 +120,7 @@ export default function MyProfile() {
             </div>
 
             <Button type="submit" className="w-full">
-              Update Profile
+              프로필 업데이트
             </Button>
           </form>
         </div>
