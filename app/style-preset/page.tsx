@@ -24,7 +24,7 @@ interface Style {
 const sampleStyles: Style[] = [
   {
     id: '1',
-    imageUrl: '/images/s4.png',
+    imageUrl: '/images/s4.jpg',
     tags: ['캐주얼', '데일리', '미니멀'],
     likes: 120,
     description: '데일리 캐주얼 룩'
