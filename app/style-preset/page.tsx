@@ -52,38 +52,38 @@ const sampleStyles: Style[] = [
   },
   {
     id: '5',
-    imageUrl: '/placeholder.svg?height=400&width=300',
+    imageUrl: '/s7.jpg?height=400&width=300',
     tags: ['스포티', '액티브', '캐주얼'],
     likes: 95,
     description: '스포티 액티브 룩'
   },
   {
     id: '6',
-    imageUrl: '/placeholder.svg?height=400&width=300',
-    tags: ['빈티지', '레트로', '유니크'],
+    imageUrl: '/s6.jpg?height=400&width=300',
+    tags: ['빈티지', '유니크', '캐주얼'],
     likes: 180,
-    description: '빈티지 레트로 룩'
+    description: '빈티지 캐주얼 룩'
   },
   {
     id: '7',
     imageUrl: '/placeholder.svg?height=400&width=300',
-    tags: ['파티', '글램', '섹시'],
+    tags: ['미니멀', '모던'],
     likes: 220,
-    description: '파티 글램 룩'
+    description: '미니멀 모던 룩'
   },
   {
     id: '8',
-    imageUrl: '/placeholder.svg?height=400&width=300',
-    tags: ['비즈니스', '포멀', '엘레강트'],
+    imageUrl: '/s11.jpg?height=400&width=300',
+    tags: ['비즈니스', '포멀', '오피스'],
     likes: 110,
     description: '비즈니스 포멀 룩'
   },
   {
     id: '9',
-    imageUrl: '/placeholder.svg?height=400&width=300',
-    tags: ['보헤미안', '에스닉', '자유로움'],
+    imageUrl: '/s17.jpg?height=400&width=300',
+    tags: ['레더', '라이더', '자유로움'],
     likes: 130,
-    description: '보헤미안 에스닉 룩'
+    description: '레더 라이더 룩'
   },
   {
     id: '10',
