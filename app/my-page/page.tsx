@@ -97,7 +97,7 @@ export default function MyPage() {
           <Link href="/style-preset" className="bg-white shadow rounded-lg p-6 flex items-center hover:shadow-md transition-shadow">
             <User className="h-8 w-8 text-orange-500" />
             <div className="ml-4">
-              <h3 className="text-lg font-semibold">스타일 설정</h3>
+              <h3 className="text-lg font-semibold">스타일 프리셋</h3>
               <p className="text-gray-600">스타일 선호도를 맞춤 설정하세요</p>
             </div>
           </Link>
