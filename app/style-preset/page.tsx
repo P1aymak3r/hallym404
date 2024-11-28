@@ -66,7 +66,7 @@ const sampleStyles: Style[] = [
   },
   {
     id: '7',
-    imageUrl: '/placeholder.svg?height=400&width=300',
+    imageUrl: '/images/s8.png',
     tags: ['미니멀', '모던'],
     likes: 220,
     description: '미니멀 모던 룩'
