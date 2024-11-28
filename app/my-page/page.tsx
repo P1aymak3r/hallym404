@@ -86,7 +86,7 @@ export default function MyPage() {
             </div>
           </Link>
 
-          <Link href="/sundance" className="bg-white shadow rounded-lg p-6 flex items-center hover:shadow-md transition-shadow">
+          <Link href="https://sundance.vercel.app/" className="bg-white shadow rounded-lg p-6 flex items-center hover:shadow-md transition-shadow">
             <MessageSquare className="h-8 w-8 text-purple-500" />
             <div className="ml-4">
               <h3 className="text-lg font-semibold">Sundance</h3>
