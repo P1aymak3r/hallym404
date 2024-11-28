@@ -3,9 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Heart, Search, User, ShoppingBag } from 'lucide-react'
+import { Heart } from 'lucide-react'
 import { Button } from '../../components/ui/button'
-import { Input } from '../../components/ui/input'
 import { Badge } from '../../components/ui/badge'
 import { Card, CardContent, CardFooter } from '../../components/ui/card'
 import { ScrollArea } from '../../components/ui/scroll-area'
@@ -14,13 +13,11 @@ import ProductHeader from '../../components/ProductHeader'
 interface Style {
   id: string
   imageUrl: string
-  image?: string
   tags: string[]
   likes: number
   description: string
 }
 
-// Sample data
 const sampleStyles: Style[] = [
   {
     id: '1',
@@ -130,9 +127,11 @@ function TagFilter({ availableTags, selectedTags, onTagSelect }: { availableTags
   )
 }
 
-function StyleCard({ style }: { style: Style }) {
+function StyleCard({ style, index }: { style: Style, index: number }) {
+  const href = index === 1 ? '/style-preset/styles' : `/styles/${style.id}`
+
   return (
-    <Link href={`/styles/${style.id}`}>
+    <Link href={href}>
       <Card className="overflow-hidden cursor-pointer">
         <CardContent className="p-0">
           <div className="relative aspect-[3/4]">
@@ -213,8 +212,8 @@ export default function StylePresetPage() {
         </div>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {filteredStyles.slice(0, visibleStyles).map((style) => (
-            <StyleCard key={style.id} style={style} />
+          {filteredStyles.slice(0, visibleStyles).map((style, index) => (
+            <StyleCard key={style.id} style={style} index={index} />
           ))}
         </div>
 
