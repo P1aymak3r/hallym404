@@ -24,7 +24,7 @@ interface Style {
 const sampleStyles: Style[] = [
   {
     id: '1',
-    imageUrl: '/placeholder.svg?height=400&width=300',
+    imageUrl: '/images/s5.jpg?height=400&width=300',
     tags: ['캐주얼', '데일리', '미니멀'],
     likes: 120,
     description: '데일리 캐주얼 룩'
@@ -45,7 +45,7 @@ const sampleStyles: Style[] = [
   },
   {
     id: '4',
-    imageUrl: '/placeholder.svg?height=400&width=300',
+    imageUrl: '/images/s4.png?height=400&width=300',
     tags: ['데이트', '로맨틱', '페미닌'],
     likes: 150,
     description: '로맨틱 데이트 룩'
