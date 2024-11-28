@@ -71,8 +71,8 @@ export default function StylePresetDetail() {
           <div className="space-y-2">
             <h2 className="text-xl font-semibold">스타일 설명</h2>
             <p className="text-muted-foreground">
-              오버사이즈 그레이 블레이저와 미니멀한 원피스의 조화로운 스타일링. 
-              앵클 부츠로 포인트를 주어 세련된 오피스룩을 완성했습니다.
+             오버사이즈 그레이 블레이저와 미니멀한 원피스가 어우러져 세련된 오피스 무드를 연출합니다. 
+              간결한 실루엣과 절제된 디자인이 고급스러운 분위기를 더하며, 깔끔하면서도 단정한 스타일링으로 미니멀한 매력을 완성했습니다.
             </p>
           </div>
         </div>
