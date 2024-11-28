@@ -91,19 +91,11 @@ const sampleStyles: Style[] = [
   },
   {
     id: '11',
-    imageUrl: '/placeholder.svg?height=400&width=300',
+    imageUrl: '/images/s37.png',
     tags: ['미니멀', '모노크롬', '심플'],
     likes: 90,
     description: '미니멀 모노크롬 룩'
-  },
-  {
-    id: '12',
-    imageUrl: '/placeholder.svg?height=400&width=300',
-    tags: ['프레피', '아카데믹', '클래식'],
-    likes: 105,
-    description: '프레피 아카데믹 룩'
-  },
-  // Add more sample styles as needed
+  }
 ]
 
 const allTags = Array.from(new Set(sampleStyles.flatMap(style => style.tags)))
