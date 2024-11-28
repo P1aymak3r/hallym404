@@ -87,10 +87,10 @@ const sampleStyles: Style[] = [
   },
   {
     id: '10',
-    imageUrl: '/placeholder.svg?height=400&width=300',
-    tags: ['힙합', '어반', '스트릿'],
+    imageUrl: '/s23.jpg?height=400&width=300',
+    tags: ['레이어드', '모던', '빈티지'],
     likes: 175,
-    description: '힙합 어반 룩'
+    description: '레이어드 빈티지 룩'
   },
   {
     id: '11',
