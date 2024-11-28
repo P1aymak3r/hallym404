@@ -176,13 +176,13 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { id: 1, name: '헤어리 오버핏 테일러드 자켓', price: '129,000', image: '/images/n1.jpg' },
-                { id: 2, name: '캐시미어 스웨터', price: '69,000', image: '/images/n2.jpg' },
-                { id: 3, name: '가죽 크로스백', price: '159,000', image: '/images/n3.jpg' },
-                { id: 4, name: '린넨 셔츠', price: '69,000', image: '/images/n4.jpg' },
-                { id: 5, name: '슬림핏 진', price: '79,000', image: '/images/n5.jpg' },
-                { id: 6, name: '니트 카디건', price: '99,000', image: '/images/n6.jpg' },
-                { id: 7, name: '플리츠 스커트', price: '85,000', image: '/images/n7.jpg' },
-                { id: 8, name: '오버사이즈 코트', price: '199,000', image: '/images/n8.jpg' }
+                { id: 2, name: '크롭트 플러피 재킷', price: '69,000', image: '/images/n2.jpg' },
+                { id: 3, name: '턱시도 재킷 드레스', price: '159,000', image: '/images/n3.jpg' },
+                { id: 4, name: '볼리베어 코트', price: '229,000', image: '/images/n4.jpg' },
+                { id: 5, name: '페이턴트 펌프스', price: '79,000', image: '/images/n5.jpg' },
+                { id: 6, name: '라인스톤 디테일 셔츠', price: '99,000', image: '/images/n6.jpg' },
+                { id: 7, name: '리브니트 보트넥 탑', price: '85,000', image: '/images/n7.jpg' },
+                { id: 8, name: '오버사이즈 집업 후디', price: '199,000', image: '/images/n8.jpg' }
               ].map((product, index) => (
                 <div key={product.id} className="group">
                   {index === 0 ? (
