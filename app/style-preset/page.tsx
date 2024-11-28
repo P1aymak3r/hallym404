@@ -38,7 +38,7 @@ const sampleStyles: Style[] = [
   },
   {
     id: '3',
-    imageUrl: '/placeholder.svg?height=400&width=300',
+    imageUrl: '/images/s3.png?height=400&width=300',
     tags: ['스트릿', '캐주얼', '트렌디'],
     likes: 200,
     description: '스트릿 캐주얼 룩'
