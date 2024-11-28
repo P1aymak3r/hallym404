@@ -52,14 +52,14 @@ const sampleStyles: Style[] = [
   },
   {
     id: '5',
-    imageUrl: '/s7.jpg?height=400&width=300',
+    imageUrl: '/images/s7.jpg?height=400&width=300',
     tags: ['스포티', '액티브', '캐주얼'],
     likes: 95,
     description: '스포티 액티브 룩'
   },
   {
     id: '6',
-    imageUrl: '/s6.jpg?height=400&width=300',
+    imageUrl: '/images/s6.jpg?height=400&width=300',
     tags: ['빈티지', '유니크', '캐주얼'],
     likes: 180,
     description: '빈티지 캐주얼 룩'
@@ -73,21 +73,21 @@ const sampleStyles: Style[] = [
   },
   {
     id: '8',
-    imageUrl: '/s11.jpg?height=400&width=300',
+    imageUrl: '/images/s11.jpg?height=400&width=300',
     tags: ['비즈니스', '포멀', '오피스'],
     likes: 110,
     description: '비즈니스 포멀 룩'
   },
   {
     id: '9',
-    imageUrl: '/s17.jpg?height=400&width=300',
+    imageUrl: '/images/s17.jpg?height=400&width=300',
     tags: ['레더', '라이더', '자유로움'],
     likes: 130,
     description: '레더 라이더 룩'
   },
   {
     id: '10',
-    imageUrl: '/s23.jpg?height=400&width=300',
+    imageUrl: '/images/s23.jpg?height=400&width=300',
     tags: ['레이어드', '모던', '빈티지'],
     likes: 175,
     description: '레이어드 빈티지 룩'
