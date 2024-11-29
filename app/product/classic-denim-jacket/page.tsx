@@ -133,7 +133,7 @@ export default function ClassicDenimJacketPage() {
             {product.officialStyling.map((style, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="relative overflow-hidden">
-                  <Link href="/styles/2">
+                  <Link href="/style-preset/styles">
                     <Image 
                       src={style.image}
                       alt={`스타일링 ${index + 1}`} 
